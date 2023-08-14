@@ -1,23 +1,35 @@
 import React from 'react';
 
-interface Props {
-    children: React.ReactNode;
-}
+interface Props { }
 
-const Transaction: React.FC<Props> = ({ children }) => {
+const Transaction: React.FC<Props> = () => {
     return (
-        <div className="App">
+        <>
+            <p className="second_heading">Your Transactions:</p>
 
-            <div className="header">
-                <h1>Expense Tracker</h1>
+            <div className="conatiner_of_list_of_transactions">
+                <ul>
+                    <li className="transaction income">
+                        <p>Earned this month</p>
+                        <div className="right">
+                            <p>৳ 100</p>
+                            <button className="link">
+                                <img
+                                    className="icon"
+                                    src="./images/edit.svg"
+                                />
+                            </button>
+                            <button className="link">
+                                <img
+                                    className="icon"
+                                    src="./images/delete.svg"
+                                />
+                            </button>
+                        </div>
+                    </li>
+                </ul>
             </div>
-
-            <div className="main">
-                {children}
-            </div>
-
-            <div className="footer">&copy;2022 Learn with Sumit</div>
-        </div>
+        </>
     )
 }
 
